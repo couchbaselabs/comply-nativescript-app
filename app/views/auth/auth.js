@@ -1,6 +1,4 @@
 var frameModule = require("ui/frame");
-var httpModule = require("http");
-var observableArrayModule = require("data/observable-array");
 var authManager = require("../../authmanager");
 
 var email;

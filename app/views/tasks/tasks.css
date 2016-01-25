@@ -1,0 +1,9 @@
+StackLayout {
+    padding: 10;
+}
+
+.projectTitle {
+    padding: 10;
+    font-weight: bold;
+    background-color: #CCCCCC;
+}

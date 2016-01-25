@@ -1,0 +1,19 @@
+<Page loaded="pageLoaded">
+    <Page.actionBar>
+		<ActionBar title="Tasks">
+			<ActionBar.actionItems>
+				<ActionItem text="New" tap="shorten" ios.position="right" />
+			</ActionBar.actionItems>
+		</ActionBar>
+	</Page.actionBar>
+    <GridLayout columns="*" rows="auto, *">
+        <Label text="{{ project.name }}" row="0" col="0" class="projectTitle" />
+        <ListView items="{{ project.tasks }}" itemTap="navigateToTask" row="1" col="0">
+            <ListView.itemTemplate>
+                <StackLayout>
+                    <Label text="{{ name || 'test name' }}" />
+                </StackLayout>
+            </ListView.itemTemplate>
+        </ListView>
+    </GridLayout>
+</Page>

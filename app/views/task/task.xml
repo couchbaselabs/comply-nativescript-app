@@ -1,0 +1,21 @@
+<Page loaded="pageLoaded">
+    <Page.actionBar>
+		<ActionBar title="Task">
+			<ActionBar.actionItems>
+				<ActionItem text="New" tap="shorten" ios.position="right" />
+			</ActionBar.actionItems>
+		</ActionBar>
+	</Page.actionBar>
+    <GridLayout columns="*" rows="auto, auto, *">
+        <Label text="{{ task.name }}" row="0" col="0" class="taskTitle" />
+        <Label text="{{ task.description }}" row="1" col="0" class="taskDescription" />
+        <ListView items="{{ task.history }}" row="2" col="0">
+            <ListView.itemTemplate>
+                <StackLayout class="listRow">
+                    <Label text="{{ (user.name.first + ' ' + user.name.last + ' - ' + createdAt) }}" class="historyUser" />
+                    <Label text="{{ log }}" />
+                </StackLayout>
+            </ListView.itemTemplate>
+        </ListView>
+    </GridLayout>
+</Page>

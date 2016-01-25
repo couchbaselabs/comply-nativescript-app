@@ -1,0 +1,16 @@
+<Page loaded="pageLoaded">
+    <Page.actionBar>
+		<ActionBar title="Projects">
+			<ActionBar.actionItems>
+				<ActionItem text="New" tap="shorten" ios.position="right" />
+			</ActionBar.actionItems>
+		</ActionBar>
+	</Page.actionBar>
+    <ListView items="{{ projects }}" itemTap="navigateToTasks">
+        <ListView.itemTemplate>
+            <StackLayout>
+                <Label text="{{ name || 'test name' }}" />
+            </StackLayout>
+        </ListView.itemTemplate>
+    </ListView>
+</Page>

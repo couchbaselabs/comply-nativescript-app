@@ -1,0 +1,19 @@
+.taskTitle {
+    padding: 10;
+    font-weight: bold;
+    background-color: #CCCCCC;
+}
+
+.taskDescription {
+    padding: 10;
+    background-color: #EEEEEE;
+}
+
+.listRow {
+    padding: 10;
+}
+
+.historyUser {
+    font-weight: bold;
+    font-size: 11;
+}

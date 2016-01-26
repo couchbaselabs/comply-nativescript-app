@@ -1,14 +1,12 @@
 <Page loaded="pageLoaded">
     <Page.actionBar>
-		<ActionBar title="Couchbase Comply">
-		</ActionBar>
+		<ActionBar title="Couchbase Comply"></ActionBar>
 	</Page.actionBar>
     <StackLayout>
         <TextField id="email" hint="Email" />
         <TextField id="password" hint="Password" secure="true" />
         <StackLayout orientation="horizontal">
             <Button text="Login" tap="login" />
-            <Button text="Register" />
         </StackLayout>
     </StackLayout>
 </Page>

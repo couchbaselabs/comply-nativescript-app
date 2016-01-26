@@ -1,6 +1,5 @@
 var frameModule = require("ui/frame");
 var observableArrayModule = require("data/observable-array");
-var applicationSettings = require("application-settings");
 var authManager = require("../../authmanager");
 var utilityModule = require("../../utility");
 
@@ -22,4 +21,9 @@ exports.pageLoaded = function(args) {
 
 exports.navigateToTasks = function(args) {
     frameModule.topmost().navigate({moduleName: "views/tasks/tasks", context: {projectId: args.object.bindingContext.projects.getItem(args.index)._id}});
+}
+
+exports.logout = function() {
+    authManager.logout();
+    frameModule.topmost().navigate({moduleName: "views/auth/auth"});
 }

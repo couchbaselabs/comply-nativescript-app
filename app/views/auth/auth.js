@@ -15,12 +15,21 @@ exports.pageLoaded = function(args) {
 }
 
 exports.login = function() {
-    console.log(email.text + " " + password.text);
     if(email.text != "" && password.text != "") {
         authManager.login(email.text, password.text).then(function(result) {
             frameModule.topmost().navigate({moduleName: "views/projects/projects", clearHistory: true});
         }, function(error) {
-            console.log(error);
+            alert({
+                title: "Attention",
+                message: error,
+                okButtonText: "Ok"
+            });
+        });
+    } else {
+        alert({
+            title: "Attention",
+            message: "The email address or password is incorrect",
+            okButtonText: "Ok"
         });
     }
 }

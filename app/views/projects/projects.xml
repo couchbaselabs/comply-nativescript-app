@@ -2,14 +2,14 @@
     <Page.actionBar>
 		<ActionBar title="Projects">
 			<ActionBar.actionItems>
-				<ActionItem text="New" tap="shorten" ios.position="right" />
+				<ActionItem text="Sign Out" tap="logout" ios.position="right" />
 			</ActionBar.actionItems>
 		</ActionBar>
 	</Page.actionBar>
     <ListView items="{{ projects }}" itemTap="navigateToTasks">
         <ListView.itemTemplate>
             <StackLayout>
-                <Label text="{{ name || 'test name' }}" />
+                <Label text="{{ name }}" />
             </StackLayout>
         </ListView.itemTemplate>
     </ListView>

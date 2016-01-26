@@ -7,6 +7,6 @@
 		</ActionBar>
 	</Page.actionBar>
     <StackLayout>
-        <TextField id="comment" hint="Comment" />
+        <TextView id="comment" hint="Comment" />
     </StackLayout>
 </Page>

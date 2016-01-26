@@ -25,6 +25,20 @@ Throughout the application there are API endpoints that connect to the server si
 
 With the server side application running, determine the host address or IP and change all URLs within the NativeScript application.  These URLs will be found in the various JavaScript files.
 
+### iOS Quirk
+
+If your API is hosted via an insecure access point (http) rather than secure (https), you will need to add an App Transport Security (ATS) policy into your iOS plist file.  Below is a very basic example of this that allows access to **ALL** insecure URLs:
+
+```
+<key>NSAppTransportSecurity</key>  
+<dict>  
+    <key>NSAllowsArbitraryLoads</key>
+    <true />  
+</dict>
+```
+
+In a production environment you would want to specify which URLs to grant access to.  This snippet of code will be inserted into your **platforms/ios/complyapp/complyapp-Info.plist** file.
+
 ## Resources
 
 Telerik NatieScript - [https://www.nativescript.org](https://www.nativescript.org)

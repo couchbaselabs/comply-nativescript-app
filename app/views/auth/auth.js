@@ -16,7 +16,7 @@ exports.pageLoaded = function(args) {
 
 exports.login = function() {
     if(email.text != "" && password.text != "") {
-        authManager.login(email.text, password.text).then(function(result) {
+        authManager.login(email.text.toLowerCase(), password.text).then(function(result) {
             frameModule.topmost().navigate({moduleName: "views/projects/projects", clearHistory: true});
         }, function(error) {
             alert({

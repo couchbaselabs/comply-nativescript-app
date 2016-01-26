@@ -1,0 +1,12 @@
+<Page loaded="pageLoaded">
+    <Page.actionBar>
+		<ActionBar title="New Comment">
+            <ActionBar.actionItems>
+				<ActionItem text="Save" tap="save" ios.position="right" />
+			</ActionBar.actionItems>
+		</ActionBar>
+	</Page.actionBar>
+    <StackLayout>
+        <TextField id="comment" hint="Comment" />
+    </StackLayout>
+</Page>

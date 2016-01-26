@@ -17,3 +17,7 @@ exports.pageLoaded = function(args) {
     });
     page.bindingContext = {task: task};
 }
+
+exports.comment = function() {
+    frameModule.topmost().navigate({moduleName: "views/log/log", context: {taskId: taskId}});
+}

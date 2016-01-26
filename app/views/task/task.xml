@@ -2,7 +2,7 @@
     <Page.actionBar>
 		<ActionBar title="Task">
 			<ActionBar.actionItems>
-				<ActionItem text="New" tap="shorten" ios.position="right" />
+				<ActionItem text="New" tap="comment" ios.position="right" />
 			</ActionBar.actionItems>
 		</ActionBar>
 	</Page.actionBar>

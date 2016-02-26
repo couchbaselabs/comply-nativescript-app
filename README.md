@@ -37,7 +37,7 @@ If your API is hosted via an insecure access point (http) rather than secure (ht
 </dict>
 ```
 
-In a production environment you would want to specify which URLs to grant access to.  This snippet of code will be inserted into your **platforms/ios/complyapp/complyapp-Info.plist** file.
+In a production environment you would want to specify which URLs to grant access to.  This snippet of code will be inserted into your **app/App_resources/iOS/Info.plist** file.
 
 ## Resources
 

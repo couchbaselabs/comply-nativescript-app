@@ -3,7 +3,7 @@
 		<ActionBar title="Couchbase Comply"></ActionBar>
 	</Page.actionBar>
     <StackLayout>
-        <TextField id="email" hint="Email" />
+        <TextField id="email" hint="Email" autocapitalizationType="none" />
         <TextField id="password" hint="Password" secure="true" />
         <StackLayout orientation="horizontal">
             <Button text="Login" tap="login" />

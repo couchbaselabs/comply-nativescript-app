@@ -8,7 +8,7 @@ var projectId;
 exports.pageLoaded = function(args) {
     page = args.object;
     projectId = page.navigationContext.projectId;
-    var project = new observableModule.Observable();
+    var project = new observableModule.Observable({});
     utilityModule.makeGetRequest("http://192.168.57.1:3000/api/project/get", [projectId]).then((result) => {
         project.set("name", result.name);
         project.set("tasks", result.tasks);

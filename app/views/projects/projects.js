@@ -8,7 +8,7 @@ exports.pageLoaded = function(args) {
     if(!authManager.isAuthenticated()) {
         frameModule.topmost().navigate({moduleName: "views/auth/auth", clearHistory: true});
     }
-    var projects = new observableArrayModule.ObservableArray();
+    var projects = new observableArrayModule.ObservableArray([]);
     utilityModule.makeGetRequest("http://192.168.57.1:3000/api/project/getAll", [authManager.getAuthToken()]).then((result) => {
         for(var i = 0; i < result.length; i++) {
             projects.push(result[i]);
@@ -25,5 +25,5 @@ exports.navigateToTasks = function(args) {
 
 exports.logout = function() {
     authManager.logout();
-    frameModule.topmost().navigate({moduleName: "views/auth/auth"});
+    frameModule.topmost().navigate({moduleName: "views/auth/auth", clearHistory: true});
 }
